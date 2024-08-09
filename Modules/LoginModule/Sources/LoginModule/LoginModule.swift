@@ -37,6 +37,6 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     @objc func didTapButton() {
-        router?.routeToHome(baseViewController: self)
+        router?.routeToHome(baseViewController: self, user: "Apit")
     }
 }

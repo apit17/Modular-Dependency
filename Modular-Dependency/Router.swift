@@ -12,8 +12,8 @@ class Router: Routing {
     
     var factory = InjectionContainer.shared.resolve(HomeFactory.self)
     
-    func routeToHome(baseViewController: UIViewController?) {
-        guard let homeVC = factory?.makeHomeViewController() else { return }
+    func routeToHome(baseViewController: UIViewController?, user: String) {
+        guard let homeVC = factory?.makeHomeViewController(user: user) else { return }
         baseViewController?.navigationController?.pushViewController(homeVC, animated: true)
     }
 }

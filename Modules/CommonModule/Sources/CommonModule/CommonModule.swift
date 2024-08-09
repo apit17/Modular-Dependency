@@ -2,11 +2,11 @@ import UIKit
 import Swinject
 
 public protocol Routing {
-    func routeToHome(baseViewController: UIViewController?)
+    func routeToHome(baseViewController: UIViewController?, user: String)
 }
 
 public protocol HomeFactory {
-    func makeHomeViewController() -> UIViewController
+    func makeHomeViewController(user: String) -> UIViewController
 }
 
 public protocol LoginFactory {
